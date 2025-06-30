@@ -1,0 +1,55 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Filtro de fechas -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/fechaInicioResumen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Inicio"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/fechaFinResumen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Fin"
+            android:focusable="false"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFiltrarResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filtrar"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Gráfico de barras -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChartResumen"
+        android:layout_width="388dp"
+        android:layout_height="257dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Gráfico de torta -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChartResumen"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
